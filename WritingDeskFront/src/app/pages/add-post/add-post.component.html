@@ -16,14 +16,14 @@
 
 
 
-<div class="form-container" style="margin-top: 50px; margin-left: 240px;">
+<form class="form-container" style="margin-top: 50px; margin-left: 240px;" (ngSubmit)="putPost()" >
     <div class="form">
         <span class="heading">Add Post</span>
-        <input placeholder="Blog Title" id="mail" type="email" class="input">
-        <input placeholder="Blog Date" id="mail" type="date" class="input">
-        <textarea placeholder="Blog Description" rows="10" cols="30" id="message" name="message" class="textarea"></textarea>
+        <input placeholder="Blog Title" id="blogTitle" name="blogTitle" type="text" class="input" [(ngModel)]="post.blogTitle">
+        <input placeholder="Blog Date" id="blogDate" name="blogDate" type="date" class="input" [(ngModel)]="post.blogDate">
+        <textarea placeholder="Blog Description" id="blogDate" name="blogDate" rows="10" cols="30" id="message" name="message" class="textarea" [(ngModel)]="post.blogDescription"></textarea>
         <div class="button-container">
-        <div class="send-button">Add</div>
+        <button type="submit" class="send-button">Add</button>
     </div>
 </div>
-</div>
+</form>
