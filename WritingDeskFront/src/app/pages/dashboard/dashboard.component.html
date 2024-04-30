@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 <header>
   <nav class="navbar">
     <div class="container">
@@ -6,7 +7,7 @@
         <a href="">Home</a>
         <a href="">About</a>
         <a href="">Blog</a>
-        <a routerLink="/user-dashboard"><i class="fas fa-user" style="font-size: 24px;"></i></a>
+        <a routerLink="/user-dashboard"><i class="fas fa-user " style="font-size: 24px;"></i></a>
       </div>
     </div>
   </nav>
@@ -19,7 +20,7 @@
       <div *ngIf="posts.length > 0">
         <div class="blog-card" *ngFor="let post of posts">
           <div class="card-header">
-            <h2 class="username">{{ post.username }}</h2>
+            <h2 class="username">{{ post.username }} <span><i class="far fa-heart heart"></i> 22</span></h2>
           </div>
           <div class="card-body">
             <h3 class="blog-title">{{ post.blogTitle }}</h3>

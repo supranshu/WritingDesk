@@ -7,6 +7,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AddPostComponent } from './pages/add-post/add-post.component';
+import { AboutusComponent } from './pages/aboutus/aboutus.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,11 @@ const routes: Routes = [
     path: 'add-post',
     component: AddPostComponent,
     pathMatch: 'full'
+  },
+  {
+    path:'aboutus',
+    pathMatch:'full',
+    component:AboutusComponent
   }
 ];
 

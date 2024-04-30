@@ -15,6 +15,7 @@ import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.co
 import { ContactComponent } from './pages/contact/contact.component';
 import { AddPostComponent } from './pages/add-post/add-post.component';
 import { FormsModule } from '@angular/forms';
+import { AboutusComponent } from './pages/aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     UserDashboardComponent,
     ContactComponent,
-    AddPostComponent
+    AddPostComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,
