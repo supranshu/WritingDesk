@@ -14,6 +14,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AddPostComponent } from './pages/add-post/add-post.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { AddPostComponent } from './pages/add-post/add-post.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, CommonModule, BrowserAnimationsModule, MatSnackBarModule, HttpClientModule
+    AppRoutingModule, CommonModule, BrowserAnimationsModule, MatSnackBarModule, HttpClientModule, FormsModule
   ],
   providers: [
     provideClientHydration()
