@@ -33,9 +33,8 @@ export class DashboardComponent implements OnInit {
   }
 
   contactUser(username: string): void {
-    
     localStorage.setItem('contactedUser', username);
-    
     this.router.navigateByUrl('/contact');
   }
+  
 }
