@@ -1,48 +1,40 @@
-<form class="form" style="">
+<form class="form" (ngSubmit)="signup()" >
     <p class="title">Register </p>
     <p class="message">Signup now and get full access to our app. </p>
         <div class="flex">
         <label>
-            <input required="" placeholder="" type="text" class="input">
-            <span>Firstname</span>
-        </label>
-
-        <label>
-            <input required="" placeholder="" type="text" class="input">
-            <span>Lastname</span>
+            <input required="" placeholder="" type="text" class="input" [(ngModel)]="signupData.fullname" >
+            <span>Fullname</span>
         </label>
     </div>  
 
     <label>
-        <input required="" placeholder="" type="text" class="input">
+        <input required="" placeholder="" type="text" class="input" [(ngModel)]="signupData.username" >
         <span>Username</span>
     </label> 
             
     <label>
-        <input required="" placeholder="" type="email" class="input">
+        <input required="" placeholder="" type="email" class="input" [(ngModel)]="signupData.email" >
         <span>Email</span>
     </label> 
         
     <label>
-        <input required="" placeholder="" type="password" class="input">
+        <input required="" placeholder="" type="password" class="input" [(ngModel)]="signupData.password" >
         <span>Password</span>
     </label>
-    <!-- <label>
-        <input required="" placeholder="" type="password" class="input">
-        <span>Confirm password</span>
-    </label> -->
+    
     <label>
-        <input required="" placeholder="" type="text" class="input">
+        <input required="" placeholder="" type="text" class="input" [(ngModel)]="signupData.city" >
         <span>City</span>
     </label> 
     <label>
-        <input required="" placeholder="" type="text" class="input">
+        <input required="" placeholder="" type="text" class="input" [(ngModel)]="signupData.phNo" >
         <span>Phone Number</span>
     </label> 
     <label>
-        <input required="" placeholder="" type="number" class="input">
+        <input required="" placeholder="" type="number" class="input" [(ngModel)]="signupData.age" >
         <span>Age</span>
     </label> 
-    <button class="submit">Submit</button>
-    <p class="signin">Already have an acount ? <a href="#">Signin</a> </p>
+    <button class="submit" type="submit" >Submit</button>
+    <p class="signin">Already have an acount ? <a routerLink="login">Login</a> </p>
 </form>
