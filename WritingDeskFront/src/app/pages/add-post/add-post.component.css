@@ -61,7 +61,7 @@
   }
   
   .form-container .form .button-container .send-button {
-    flex-basis: 70%;
+    flex-basis: 100%;
     background: #ff7a01;
     padding: 10px;
     color: #001925;
