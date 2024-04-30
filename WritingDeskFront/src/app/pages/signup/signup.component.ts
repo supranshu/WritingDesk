@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Agent } from 'http';
 import { ApisService } from '../../services/apis.service';
@@ -9,7 +9,11 @@ import { Router } from '@angular/router';
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })
-export class SignupComponent {
+export class SignupComponent implements OnInit{
+
+  ngOnInit(): void {
+    localStorage.clear();
+  }
 
   constructor(private snack:MatSnackBar, private service:ApisService,private router:Router) { }
   public signupData={

@@ -3,38 +3,38 @@
     <p class="message">Signup now and get full access to our app. </p>
         <div class="flex">
         <label>
-            <input required="" placeholder="" type="text" class="input" [(ngModel)]="signupData.fullname" >
+            <input required="" name="fullname" placeholder="" type="text" class="input" [(ngModel)]="signupData.fullname" >
             <span>Fullname</span>
         </label>
     </div>  
 
     <label>
-        <input required="" placeholder="" type="text" class="input" [(ngModel)]="signupData.username" >
+        <input required="" placeholder="" name="username" type="text" class="input" [(ngModel)]="signupData.username" >
         <span>Username</span>
     </label> 
             
     <label>
-        <input required="" placeholder="" type="email" class="input" [(ngModel)]="signupData.email" >
+        <input required="" placeholder="" name="email" type="email" class="input" [(ngModel)]="signupData.email" >
         <span>Email</span>
     </label> 
         
     <label>
-        <input required="" placeholder="" type="password" class="input" [(ngModel)]="signupData.password" >
+        <input required="" placeholder="" name="password" type="password" class="input" [(ngModel)]="signupData.password" >
         <span>Password</span>
     </label>
     
     <label>
-        <input required="" placeholder="" type="text" class="input" [(ngModel)]="signupData.city" >
+        <input required="" placeholder="" name="city" type="text" class="input" [(ngModel)]="signupData.city" >
         <span>City</span>
     </label> 
     <label>
-        <input required="" placeholder="" type="text" class="input" [(ngModel)]="signupData.phNo" >
+        <input required="" placeholder="" name="phNo" type="text" class="input" [(ngModel)]="signupData.phNo" >
         <span>Phone Number</span>
     </label> 
     <label>
-        <input required="" placeholder="" type="number" class="input" [(ngModel)]="signupData.age" >
+        <input required="" placeholder="" name="age" type="number" class="input" [(ngModel)]="signupData.age" >
         <span>Age</span>
     </label> 
     <button class="submit" type="submit" >Submit</button>
-    <p class="signin">Already have an acount ? <a routerLink="login">Login</a> </p>
+    <p class="signin">Already have an acount ? <a routerLink="/login">Login</a> </p>
 </form>
