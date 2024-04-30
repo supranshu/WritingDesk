@@ -11,36 +11,42 @@
   </ul>
 </nav>
 
-<div class="user-card" style="margin-left: 500px; margin-top: 50px;">
-  <div class="user-img">
-    <img src="../../../assets/pfp.jpg" alt="User Profile">
+<div class="container">
+  <!-- User Details Card -->
+  <div class="user-card">
+    <div class="user-img">
+      <img src="../../../assets/pfp.jpg" alt="User Profile">
+    </div>
+    <div class="user-info">
+      <span>{{ fullName }}</span>
+      <p class="info">{{ username }}</p>
+      <p class="info">{{ city }}</p>
+      <p class="info">{{ email }}</p>
+      <p class="info">{{ phNo }}</p>
+      <p class="info">{{ age }}</p>
+    </div>
   </div>
-  <div class="user-info">
-    <span>{{ fullName }}</span>
-    <p class="info">{{ username }}</p>
-    <p class="info">{{ city }}</p>
-    <p class="info">{{ email }}</p>
-    <p class="info">{{ phNo }}</p>
-    <p class="info">{{ age }}</p>
-  </div>
-</div>
 
-<!-- User Posts -->
-<div *ngIf="posts && posts.length > 0" style="margin-left: 500px; margin-top: 20px;">
-  <h2>User Posts</h2>
-  <div class="blog-cards">
-    <div class="blog-card" *ngFor="let post of posts">
-      <div class="card-header">
-        <h2 class="username">{{ post.username }}</h2>
+  <!-- User Posts -->
+  <div class="user-posts">
+    <div *ngIf="posts && posts.length > 0">
+      <h2>User Posts</h2>
+      <div class="blog-cards">
+        <div class="blog-card" *ngFor="let post of posts">
+          <div class="card-header">
+            <h2 class="username">{{ post.username }}</h2>
+          </div>
+          <div class="card-body">
+            <h3 class="blog-title">{{ post.blogTitle }}</h3>
+            <p class="blog-description">{{ post.blogDescription }}</p>
+            <button class="contact-btn" (click)="deletepost(post.blogTitle)">DELETE POST</button>
+          </div>
+        </div>
       </div>
-      <div class="card-body">
-        <h3 class="blog-title">{{ post.blogTitle }}</h3>
-        <p class="blog-description">{{ post.blogDescription }}</p>
-        <button class="contact-btn" (click)="deletepost(post.blogTitle)">DELETE POST</button>
-      </div>  
     </div>
   </div>
 </div>
+
 
 <!-- Add Post Button -->
 <div class="add-post-button" style="margin-left: 570px; margin-top: 30px;">
