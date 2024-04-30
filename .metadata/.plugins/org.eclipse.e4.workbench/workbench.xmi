@@ -1372,8 +1372,8 @@
     <tags>View</tags>
     <tags>categoryTag:Docker</tags>
   </descriptors>
-  <descriptors xmi:id="_tNIHewcIEe-fVvk71yF6DQ" elementId="org.eclipse.linuxtools.docker.ui.dockerImagesView" label="Docker Images" iconURI="platform:/plugin/org.eclipse.linuxtools.docker.ui/icons/dbgroup_obj.gif" tooltip="" category="Docker" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
-    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.linuxtools.internal.docker.ui.views.DockerImagesView"/>
+  <descriptors xmi:id="_tNIHewcIEe-fVvk71yF6DQ" elementId="org.eclipse.linuxtools.docker.ui.dockerassetsView" label="Docker assets" iconURI="platform:/plugin/org.eclipse.linuxtools.docker.ui/icons/dbgroup_obj.gif" tooltip="" category="Docker" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.linuxtools.internal.docker.ui.views.DockerassetsView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.linuxtools.docker.ui"/>
     <tags>View</tags>
     <tags>categoryTag:Docker</tags>
@@ -1634,13 +1634,13 @@
     <tags>View</tags>
     <tags>categoryTag:General</tags>
   </descriptors>
-  <descriptors xmi:id="_tNIHpwcIEe-fVvk71yF6DQ" elementId="org.eclipse.jpt.ui.jpaStructureView" label="JPA Structure" iconURI="platform:/plugin/org.eclipse.jpt.jpa.ui/images/views/jpa-structure.gif" tooltip="" category="JPA" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+  <descriptors xmi:id="_tNIHpwcIEe-fVvk71yF6DQ" elementId="org.eclipse.jpt.ui.jpaStructureView" label="JPA Structure" iconURI="platform:/plugin/org.eclipse.jpt.jpa.ui/assets/views/jpa-structure.gif" tooltip="" category="JPA" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.jpt.jpa.ui.internal.views.JpaStructureView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.jpt.jpa.ui"/>
     <tags>View</tags>
     <tags>categoryTag:JPA</tags>
   </descriptors>
-  <descriptors xmi:id="_tNIHqAcIEe-fVvk71yF6DQ" elementId="org.eclipse.jpt.ui.jpaDetailsView" label="JPA Details" iconURI="platform:/plugin/org.eclipse.jpt.jpa.ui/images/views/jpa-details.gif" tooltip="" category="JPA" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+  <descriptors xmi:id="_tNIHqAcIEe-fVvk71yF6DQ" elementId="org.eclipse.jpt.ui.jpaDetailsView" label="JPA Details" iconURI="platform:/plugin/org.eclipse.jpt.jpa.ui/assets/views/jpa-details.gif" tooltip="" category="JPA" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.jpt.jpa.ui.internal.views.JpaDetailsView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.jpt.jpa.ui"/>
     <tags>View</tags>
@@ -2280,7 +2280,7 @@
   <commands xmi:id="_tNJVBwcIEe-fVvk71yF6DQ" elementId="org.eclipse.jdt.ui.edit.text.java.surround.with.quickMenu" commandName="Surround With Quick Menu" description="Shows the Surround With quick menu" category="_tNJ5qAcIEe-fVvk71yF6DQ"/>
   <commands xmi:id="_tNJVCAcIEe-fVvk71yF6DQ" elementId="org.eclipse.search.ui.openFileSearchPage" commandName="File Search" description="Open the Search dialog's file search page" category="_tNJ5ogcIEe-fVvk71yF6DQ"/>
   <commands xmi:id="_tNJVCQcIEe-fVvk71yF6DQ" elementId="org.eclipse.jdt.ui.edit.text.java.search.implementors.in.workspace" commandName="Implementors in Workspace" description="Search for implementors of the selected interface" category="_tNJ5ogcIEe-fVvk71yF6DQ"/>
-  <commands xmi:id="_tNJVCgcIEe-fVvk71yF6DQ" elementId="org.eclipse.linuxtools.docker.ui.commands.removeImages" commandName="Re&amp;move " description="Remove the selected images" category="_tNJ5jwcIEe-fVvk71yF6DQ"/>
+  <commands xmi:id="_tNJVCgcIEe-fVvk71yF6DQ" elementId="org.eclipse.linuxtools.docker.ui.commands.removeassets" commandName="Re&amp;move " description="Remove the selected assets" category="_tNJ5jwcIEe-fVvk71yF6DQ"/>
   <commands xmi:id="_tNJVCwcIEe-fVvk71yF6DQ" elementId="org.eclipse.egit.ui.RepositoriesViewAddRepository" commandName="Add a Git Repository..." description="Adds an existing Git repository to the Git Repositories view" category="_tNJ5owcIEe-fVvk71yF6DQ"/>
   <commands xmi:id="_tNJVDAcIEe-fVvk71yF6DQ" elementId="org.eclipse.jdt.debug.ui.breakpoint.properties" commandName="Java Breakpoint Properties" description="View and edit the properties for a given Java breakpoint" category="_tNJ5iQcIEe-fVvk71yF6DQ"/>
   <commands xmi:id="_tNJVDQcIEe-fVvk71yF6DQ" elementId="org.eclipse.jdt.ui.navigate.open.type.in.hierarchy" commandName="Open Type in Hierarchy" description="Open a type in the type hierarchy view" category="_tNJ5mAcIEe-fVvk71yF6DQ"/>
@@ -2594,7 +2594,7 @@
   <commands xmi:id="_tNJWNQcIEe-fVvk71yF6DQ" elementId="org.eclipse.lsp4e.openCallHierarchy" commandName="Open Call Hierarchy" description="%command.open.call.hierarchy.decription" category="_tNJ5mQcIEe-fVvk71yF6DQ"/>
   <commands xmi:id="_tNJWNgcIEe-fVvk71yF6DQ" elementId="org.eclipse.compare.compareWithOther" commandName="Compare With Other Resource" description="Compare resources, clipboard contents or editors" category="_tNJ5mwcIEe-fVvk71yF6DQ"/>
   <commands xmi:id="_tNJWNwcIEe-fVvk71yF6DQ" elementId="org.eclipse.wst.jsdt.ui.edit.text.java.open.external.javadoc" commandName="Open External JSDoc" description="Open the JSDoc of the selected element in an external browser" category="_tNJ5mAcIEe-fVvk71yF6DQ"/>
-  <commands xmi:id="_tNJWOAcIEe-fVvk71yF6DQ" elementId="org.eclipse.linuxtools.docker.ui.commands.showAllImages" commandName="&amp;Show all Images" description="Show all Images, including intermediate images." category="_tNJ5jwcIEe-fVvk71yF6DQ"/>
+  <commands xmi:id="_tNJWOAcIEe-fVvk71yF6DQ" elementId="org.eclipse.linuxtools.docker.ui.commands.showAllassets" commandName="&amp;Show all assets" description="Show all assets, including intermediate assets." category="_tNJ5jwcIEe-fVvk71yF6DQ"/>
   <commands xmi:id="_tNJWOQcIEe-fVvk71yF6DQ" elementId="org.eclipse.egit.ui.team.CreatePatch" commandName="Create Patch..." category="_tNJ5owcIEe-fVvk71yF6DQ"/>
   <commands xmi:id="_tNJWOgcIEe-fVvk71yF6DQ" elementId="org.eclipse.ui.editors.revisions.author.toggle" commandName="Toggle Revision Author Display" description="Toggles the display of the revision author" category="_tNJ5fgcIEe-fVvk71yF6DQ"/>
   <commands xmi:id="_tNJWOwcIEe-fVvk71yF6DQ" elementId="org.eclipse.ui.edit.text.goto.windowEnd" commandName="Window End" description="Go to the end of the window" category="_tNJ5fgcIEe-fVvk71yF6DQ"/>
