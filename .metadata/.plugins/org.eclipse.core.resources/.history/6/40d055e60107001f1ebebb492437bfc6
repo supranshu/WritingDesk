@@ -1,0 +1,5 @@
+package com.writingdesk.controller;
+
+public class HomeController {
+
+}

@@ -1,0 +1,5 @@
+package com.writingdesk.repo;
+
+public interface PostRepo {
+
+}
