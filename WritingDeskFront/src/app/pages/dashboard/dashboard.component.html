@@ -8,10 +8,8 @@
       <div class = "navbar-nav">
         <a href = "">home</a>
         <a href = "">about</a>
-        <a href = "">blog</a>
-        <div class="user-profile">
-          <a href="#"><i class="fas fa-user"></i></a>
-        </div>
+        <a href = "">Blog</a>
+        <a href = ""><i class="fas fa-user" style="font-size: 24px;"></i></a>
       </div>
     </div>
   </nav>
@@ -22,31 +20,20 @@
 
 
 <!-- Dashboard Component HTML -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-4" *ngFor="let post of posts">
-      <div class="card">
-        <div class="img">
-          <div class="save">
-            <svg class="svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.25 0H6.75C5.65 0 4.75 0.9 4.75 2V22L12 18L19.25 22V2C19.25 0.9 18.35 0 17.25 0ZM12 16L5.75 19V3H18.25V19L12 16Z" fill="#CED8DE"/>
-            </svg>
-          </div>
-        </div>
-        <div class="text">
-          <p class="h3" style="font-size: 28px;">{{ post.username }}</p>
-          <p class="p" style="font-size: 22px;">{{ post.blogTitle }}</p>
-          <p>{{ post.blogDescription }}</p>
-          <div style="margin-top: 10px;">
-            <button (click)="contactUser(post.username)">
-              <span>Contact</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+
+
+<div class="blog-card">
+  <div class="card-header">
+    <h2 class="username">Username</h2>
+  </div>
+  <div class="card-body">
+    <h3 class="blog-title">Blog Title</h3>
+    <p class="blog-description">Blog description goes here. This is a sample text that can be longer than 30-40 words. The card will automatically adjust its height to fit the content without changing the overall style or shape.</p>
+    <button class="contact-btn">CONTACT</button>
   </div>
 </div>
+
+
 
 
 
