@@ -11,6 +11,11 @@ import { ApisService } from '../../services/apis.service';
 export class UserDashboardComponent implements OnInit {
   username: string | null = '';
   posts: any[] = [];
+  fullName: string | undefined;
+  city: string | undefined;
+  email: string | undefined;
+  phNo: string | undefined;
+  age: number | undefined;
 
   constructor(private router: Router, private snack: MatSnackBar, private service: ApisService) { }
 
@@ -24,9 +29,12 @@ export class UserDashboardComponent implements OnInit {
     this.service.contactUser(this.username ?? '').subscribe(
       (data: any) => {
         console.log(data);
-        // Assuming your response contains user details
-        // For example, if your API response contains 'fullName', you can assign it here
-        // this.fullName = data.fullName;
+        // Assign user details obtained from API response to component variables
+        this.fullName = data.fullName;
+        this.city = data.city;
+        this.email = data.email;
+        this.phNo = data.phNo;
+        this.age = data.age;
         this.snack.open('User Details', '', { duration: 3000 });
       },
       (error) => {
@@ -50,8 +58,14 @@ export class UserDashboardComponent implements OnInit {
     );
   }
 
-  contactUser(username: string): void {
-    // Implement your logic to contact the user
-    console.log('Contacting user:', username);
+  deletepost(blogTitle: string): void {
+    this.service.deletePost(blogTitle).subscribe(
+      (data: any) => {
+        console.log(data);
+        this.snack.open('Post Deleted', '', { duration: 3000 });
+        this.getPostByUser();
+      }
+    );
   }
+
 }
