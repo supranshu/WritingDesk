@@ -19,4 +19,8 @@ export class ApisService {
   public signup(user:any){
     return this.http.post(`${baseUrl}/signup`,user);
   }
+
+  public getAllPosts(){
+    return this.http.get(`${baseUrl}/all-post`);
+  }
 }
