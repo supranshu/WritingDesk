@@ -73,7 +73,7 @@ header{
     justify-content: center;
     text-align: center;
     color: #fff;
-    background: url(/assets/home.jpg);
+    background: url(/assets/home.jpg) ;
 }
 .banner-title{
     font-size: 3rem;
