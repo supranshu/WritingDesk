@@ -23,4 +23,13 @@ export class ApisService {
   public getAllPosts(){
     return this.http.get(`${baseUrl}/all-post`);
   }
+
+  public contactUser(username:any){
+    return this.http.get(`${baseUrl}/contact-user/${username}`);
+
+  }
+
+  public getPostByUsername(username:any){
+    return this.http.get(`${baseUrl}/user-posts/${username}`);
+  }
 }
