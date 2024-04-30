@@ -32,4 +32,12 @@ export class ApisService {
   public getPostByUsername(username:any){
     return this.http.get(`${baseUrl}/user-posts/${username}`);
   }
+
+  public deletePost(blogTitle:any){
+    return this.http.delete(`${baseUrl}/delete-post/${blogTitle}`);
+  }
+
+  public addPost(post:any){
+    return this.http.post(`${baseUrl}/create-post`,post);
+  }
 }
