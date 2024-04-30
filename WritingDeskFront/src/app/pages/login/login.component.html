@@ -1,21 +1,25 @@
 
-<form class="form" style="-webkit-box-shadow:0px 0px 19px 0px rgba(46,255,227,0.9);
+<form class="form" (ngSubmit)="login()" style="-webkit-box-shadow:0px 0px 19px 0px rgba(46,255,227,0.9);
 -moz-box-shadow: 0px 0px 19px 0px rgba(46,255,227,0.9);
-box-shadow: 0px 0px 19px 0px rgba(46,255,227,0.9);" (ngSubmit)="login()" >
+box-shadow: 0px 0px 19px 0px rgba(46,255,227,0.9);">
     <p class="title">Login </p>
-    
-          
-            
+    <p class="message">Signup now and get full access to our app. </p>
+
     <label>
-        <input class="input" name="username" type="text" placeholder="" required="" [(ngModel)]="loginData.username" >
+        <input required="" placeholder="" name="username" type="text" class="input" [(ngModel)]="loginData.username" >
         <span>Username</span>
     </label> 
-        
+            
+    
     <label>
-        <input class="input" name="password" type="password" placeholder="" required="" [(ngModel)]="loginData.password" >
+        <input required="" placeholder="" name="password" type="password" class="input" [(ngModel)]="loginData.password" >
         <span>Password</span>
     </label>
     
-    <button class="submit"  type="submit" >Submit</button>
+    
+    <button class="submit" type="submit" >Submit</button>
     <p class="signin">Already have an acount ? <a routerLink="/signup">Signup</a> </p>
 </form>
+
+
+
