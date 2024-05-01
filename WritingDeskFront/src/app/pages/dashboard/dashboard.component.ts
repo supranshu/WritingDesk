@@ -15,7 +15,12 @@ export class DashboardComponent implements OnInit {
   constructor(private service: ApisService, private snack: MatSnackBar, private router: Router) { }
 
   ngOnInit(): void {
+    if (!localStorage.length) {
+      
+      this.router.navigateByUrl('/login');
+    }
     this.loadAllPosts();
+    
   }
 
   loadAllPosts(): void {

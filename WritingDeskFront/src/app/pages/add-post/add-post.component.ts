@@ -10,6 +10,10 @@ import { ApisService } from '../../services/apis.service';
 })
 export class AddPostComponent implements OnInit {
   ngOnInit(): void {
+    if (!localStorage.length) {
+      
+      this.router.navigateByUrl('/login');
+    }
       this.username = localStorage.getItem('username') ?? '';
   }
   public username: string | null = '';

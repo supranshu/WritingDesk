@@ -13,6 +13,10 @@ export class ContactComponent implements OnInit {
   constructor(private router: Router, private snack: MatSnackBar, private service: ApisService) { }
 
   ngOnInit(): void {
+    if (!localStorage.length) {
+      
+      this.router.navigateByUrl('/login');
+    }
     if (typeof localStorage !== 'undefined') {
       this.contactuser = localStorage.getItem('contactedUser') ?? '';
       this.contact();

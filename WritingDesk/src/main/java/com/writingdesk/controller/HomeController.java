@@ -56,7 +56,7 @@ public class HomeController {
 	}
 	
 	@DeleteMapping("/delete-post/{blogTitle}")
-	public String deletePost(@PathVariable("blogTitle")String blogTitle) {
+	public ResponseEntity<String> deletePost(@PathVariable("blogTitle")String blogTitle) {
 		return postService.deletePost(blogTitle);
 	}
 	
