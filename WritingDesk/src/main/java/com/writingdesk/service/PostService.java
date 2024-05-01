@@ -3,6 +3,8 @@ package com.writingdesk.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.writingdesk.model.Post;
@@ -48,19 +50,20 @@ public class PostService {
 		return posts;
 	}
 	
-	//Delete Post
-	public String deletePost(String blogTitle) {
-		
-		Post post=postRepo.findByBlogTitle(blogTitle);
-		
-		long id=post.getPostId();
-		postRepo.delete(post);
-		try {
-			postRepo.deleteById(id);
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
-		return "Post Deleted Successfully";
+	public ResponseEntity<String> deletePost(String blogTitle) {
+	    Post post = postRepo.findByBlogTitle(blogTitle);
+	    if (post == null) {
+	        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Post not found");
+	    }
+
+	    try {
+	        long id = post.getPostId();
+	        postRepo.delete(post);
+	        postRepo.deleteById(id);
+	        return ResponseEntity.ok("Post Deleted Successfully");
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to delete post");
+	    }
 	}
 }
