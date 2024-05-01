@@ -65,7 +65,14 @@ header{
 .navbar-nav a:hover{
     opacity: 0.7;
 }
-
+.m1{
+  background-image: url('../../../assets/bgimg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 10px;
+}
 /* User Details Card */
 .user-card {
   width: 100%;

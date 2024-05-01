@@ -684,6 +684,14 @@ box-shadow: 0px 0px 19px 4px rgba(255,46,206,0.38);
   .heart{
     margin-left: 350px;
   }
+  .m1{
+    background-image: url('../../../assets/bgimg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 10px;
+  }
 
 
 

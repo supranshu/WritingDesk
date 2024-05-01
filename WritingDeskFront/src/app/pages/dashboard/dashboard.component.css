@@ -11,10 +11,21 @@
     padding: 0;
     margin: 0;
     font-family: var(--Quicksand);
+    
+}
+.m1{
+    background-image: url('../../../assets/bgimg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 10px;
+    
 }
 body{
     line-height: 1.4;
     color: var(--dark);
+    
 }
 img{
     width: 100%;

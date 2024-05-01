@@ -1,8 +1,10 @@
 /* header */
 header{
   min-height: 100vh;
-  /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/assests/banner-bg.jpg) center/cover no-repeat fixed; */
-  background-image: linear-gradient(to right top, #1fe3db, #23cdcc, #29b8bc, #2fa3aa, #348f98, #1e879a, #057e9c, #00749c, #0070b5, #0068cd, #005cdf, #0047e7);
+  background-image: url('../../../assets/bgimg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   display: flex;
   display: flex;
   flex-direction: column;
