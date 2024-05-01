@@ -1,7 +1,8 @@
 /* header */
 header{
-  min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/assests/banner-bg.jpg) center/cover no-repeat fixed;
+  min-height: 130vh;
+  /* background: linear-gradient(rgba(219, 43, 43, 0.4), rgba(151, 29, 29, 0.4)), url('/WritingDeskFront/src/assets/1.jpg') center/cover no-repeat fixed; */
+  background-image: linear-gradient(to right top, #1fe3db, #23cdcc, #29b8bc, #2fa3aa, #348f98, #1e879a, #057e9c, #00749c, #0070b5, #0068cd, #005cdf, #0047e7);
   display: flex;
   flex-direction: column;
   justify-content: stretch;
