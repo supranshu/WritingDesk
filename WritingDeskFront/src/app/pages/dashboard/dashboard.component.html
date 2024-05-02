@@ -1,40 +1,53 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 <div class="m1">
-<header>
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="navbar-brand">Writing Desk</a>
-      <div class="navbar-nav">
-        <a routerLink="/">HOME</a>
-        <a routerLink="/user-dashboard"><i class="fas fa-user " style="font-size: 24px;"></i></a>
-        <a routerLink="/login">LOGOUT</a>
-        
-        
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">Writing Desk</a>
+        <div class="navbar-nav">
+          <a routerLink="/">HOME</a>
+          <div class="filter-container" *ngIf="showFilter">
+            <input type="text" [(ngModel)]="filterUsername" placeholder="Filter by username" />
+            <button (click)="filterByUsername()">Filter</button>
+          </div>
+          <a (click)="toggleFilter()"><i class="fas fa-filter" style="font-size: 24px;"></i></a>
+          <a routerLink="/user-dashboard"><i class="fas fa-user" style="font-size: 24px;"></i></a>
+          <a routerLink="/login">LOGOUT</a>
+        </div>
       </div>
-    </div>
-  </nav>
-</header>
+    </nav>
+  </header>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      
-      <div *ngIf="posts.length > 0">
-        <div class="blog-card" *ngFor="let post of posts">
+  <div class="content-wrapper">
+    <div class="sidebar">
+      <a routerLink="/">HOME <i class="fas fa-home" style="font-size: 24px;"></i> </a>
+      <div class="filter-container" *ngIf="showFilter">
+        <input type="text" [(ngModel)]="filterUsername" placeholder="Filter by username" />
+        <button (click)="filterByUsername()">Filter</button>
+      </div>
+      <a (click)="toggleFilter()">FILTER<i class="fas fa-filter" style="font-size: 24px;"></i></a>
+      <a routerLink="/user-dashboard">MY PROFILE <i class="fas fa-user" style="font-size: 24px;"></i></a>
+      <a routerLink="/login">LOGOUT <i class="fas fa-sign-out-alt" style="font-size: 24px;"></i></a>
+    </div>
+    <div class="posts-container">
+      <div *ngIf="filteredPosts.length > 0">
+        <div class="blog-card" *ngFor="let post of filteredPosts">
           <div class="card-header">
             <h2 class="username">{{ post.username }} <span><i class="far fa-heart heart"></i> 22</span></h2>
           </div>
           <div class="card-body">
             <h3 class="blog-title">{{ post.blogTitle }}</h3>
+            <div class="blog-image">
+              <img src="../../../assets/postbg.jpg" [alt]="post.blogTitle">
+            </div>
             <p class="blog-description">{{ post.blogDescription }}</p>
             <button class="contact-btn" (click)="contactUser(post.username)">CONTACT</button>
           </div>
         </div>
       </div>
-      <div *ngIf="posts.length === 0">
+      <div *ngIf="filteredPosts.length === 0">
         <p>No posts available</p>
       </div>
     </div>
   </div>
-</div>
 </div>

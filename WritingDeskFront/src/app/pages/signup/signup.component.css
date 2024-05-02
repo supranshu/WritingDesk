@@ -2,7 +2,7 @@
 header{
   min-height: 130vh;
   /* background: linear-gradient(rgba(219, 43, 43, 0.4), rgba(151, 29, 29, 0.4)), url('/WritingDeskFront/src/assets/1.jpg') center/cover no-repeat fixed; */
-  background-image: url('../../../assets/bgimg.jpg');
+  background-image: url('../../../assets/dashbg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
